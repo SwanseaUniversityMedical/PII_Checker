@@ -11,6 +11,10 @@ word_patterns_CUSTOM = [
         regex =r"(?i)(?:^|\W)name(?:$|\W)",
         score=0.9),
     Pattern(
+        name="email",
+        regex =r"(?i)(?:^|\W)email(?:$|\W)",
+        score=0.9),
+    Pattern(
         name="DOB",
         regex =r"(?i)(?:^|\W)dob(?:$|\W)",
         score=0.9),
@@ -37,6 +41,22 @@ word_patterns_CUSTOM = [
     Pattern(
         name="School",
         regex =r"(?i)(?:^|\W)school(?:$|\W)",
+        score=0.9),
+    Pattern(
+        name="Address",
+        regex =r"(?i)(?:^|\W)address(?:$|\W)",
+        score=0.9),
+    Pattern(
+        name="Building",
+        regex =r"(?i)(?:^|\W)building(?:$|\W)",
+        score=0.9),
+    Pattern(
+        name="Initial",
+        regex =r"(?i)(?:^|\W)initial(?:$|\W)",
+        score=0.9),        
+    Pattern(
+        name="Initials",
+        regex =r"(?i)(?:^|\W)initials(?:$|\W)",
         score=0.9)
 ]
 
