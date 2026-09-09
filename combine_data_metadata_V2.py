@@ -17,8 +17,17 @@ def userinput(input_file, metadata_file):
     met_df = met_df.replace(r'^\s*$', np.nan, regex=True).fillna("NULL")
 
 #get metadata variable names and labels
-    meta_varnames = met_df['var_name']
-    meta_varlabels = met_df['var_label']
+#    meta_varnames = met_df['var_name']
+ #   meta_varlabels = met_df['var_label']
+
+#updated code to remove duplicate vars from metadata that caused errors
+    met_df_unique = met_df.drop_duplicates(
+        subset="var_name",
+        keep="first"
+    ).copy()
+
+    meta_varnames = met_df_unique['var_name']
+    meta_varlabels = met_df_unique['var_label']
 
 #create series with varnames as index and labels
     series2 = pd.Series(data=meta_varlabels.values, index=meta_varnames.values)

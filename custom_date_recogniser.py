@@ -107,7 +107,7 @@ context_words_dobdod = [
 #create pattern recogniser
 def get_date_recogniser():
     return PatternRecognizer(
-        supported_entity="DOB_DOD_CUSTOM",
+        supported_entity="FULL_DATES_CUSTOM",
         patterns=date_patterns,
         context=context_words_dobdod 
     )

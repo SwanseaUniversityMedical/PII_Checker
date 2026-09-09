@@ -4,6 +4,10 @@ Please ensure your metadata names variable names and descriptions as "var_name" 
 
 Please ensure encoding of csv is utf-8.
 
-Include explanation of each flag and keyword search.
+To include your own keywords in the metadata search, edit custom_varlabel_recogniser.py and add a new Pattern in the same format as the current code. It is case-insensitive so just name the pattern and put in the keyword within the regex line e.g.  regex =r"(?i)(?:^|\W)insert your keyword here(?:$|\W)"
+
+
+
+
 
 
